@@ -68,7 +68,7 @@ db createDB(const char* user, const char* pass,
 bool connect(db* myDB, const char* user, const char* pass) {
 	if (strcmp(user, myDB->userName) == 0 &&
 		strcmp(pass, myDB->pass) == 0) {
-		myDB->pf = fopen(myDB->fileName, "wb+");
+		myDB->pf = fopen(myDB->fileName, "a+");
 		if (myDB->pf == NULL)
 			return false;
 		return true;
